@@ -4,6 +4,8 @@ import maplibregl from "maplibre-gl";
 import { Protocol } from "pmtiles";
 import { useEffect, useMemo } from "react";
 import { Map as MapGL } from "react-map-gl/maplibre";
+import { Stations } from "./components/Stations.tsx";
+import { SubwayLines } from "./components/SubwayLines.tsx";
 import { createMapStyle } from "./lib/map-style.ts";
 
 export default function App() {
@@ -26,6 +28,9 @@ export default function App() {
 			}}
 			style={{ width: "100vw", height: "100vh" }}
 			mapStyle={mapStyle}
-		/>
+		>
+			<SubwayLines />
+			<Stations />
+		</MapGL>
 	);
 }
