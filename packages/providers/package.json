@@ -13,6 +13,7 @@
 		"check-types": "tsc --noEmit"
 	},
 	"dependencies": {
+		"@undergrid/geo": "workspace:*",
 		"@undergrid/types": "workspace:*"
 	},
 	"devDependencies": {

@@ -10,8 +10,19 @@
 		"check-types": "tsc -b"
 	},
 	"dependencies": {
+		"@deck.gl/core": "^9.2.11",
+		"@deck.gl/geo-layers": "^9.2.11",
+		"@deck.gl/layers": "^9.2.11",
+		"@deck.gl/mapbox": "^9.2.11",
+		"@protomaps/basemaps": "^5.7.2",
+		"@undergrid/geo": "workspace:*",
+		"@undergrid/types": "workspace:*",
+		"hono": "^4.12.9",
+		"maplibre-gl": "^5.21.1",
+		"pmtiles": "^4.4.0",
 		"react": "^19.2.4",
-		"react-dom": "^19.2.4"
+		"react-dom": "^19.2.4",
+		"react-map-gl": "^8.1.0"
 	},
 	"devDependencies": {
 		"@cloudflare/vite-plugin": "^1.30.1",
