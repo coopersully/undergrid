@@ -6,6 +6,8 @@ import { useEffect, useMemo } from "react";
 import { Map as MapGL } from "react-map-gl/maplibre";
 import { Stations } from "./components/Stations.tsx";
 import { SubwayLines } from "./components/SubwayLines.tsx";
+import { TrainLayer } from "./components/TrainLayer.ts";
+import { useTrains } from "./hooks/useTrains.ts";
 import { createMapStyle } from "./lib/map-style.ts";
 
 export default function App() {
@@ -18,6 +20,7 @@ export default function App() {
 	}, []);
 
 	const mapStyle = useMemo(() => createMapStyle(), []);
+	const trains = useTrains("nyc");
 
 	return (
 		<MapGL
@@ -31,6 +34,7 @@ export default function App() {
 		>
 			<SubwayLines />
 			<Stations />
+			<TrainLayer trains={trains} />
 		</MapGL>
 	);
 }
