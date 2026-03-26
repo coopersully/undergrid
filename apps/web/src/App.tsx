@@ -6,7 +6,7 @@ import { useEffect, useMemo } from "react";
 import { Map as MapGL } from "react-map-gl/maplibre";
 import { Stations } from "./components/Stations.tsx";
 import { SubwayLines } from "./components/SubwayLines.tsx";
-import { TrainLayer } from "./components/TrainLayer.ts";
+import { TrainLayer } from "./components/TrainLayer.tsx";
 import { useTrains } from "./hooks/useTrains.ts";
 import { createMapStyle } from "./lib/map-style.ts";
 

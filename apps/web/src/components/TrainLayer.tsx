@@ -1,7 +1,7 @@
 import { ScatterplotLayer } from "@deck.gl/layers";
 import type { Train } from "@undergrid/types";
 import { useMemo } from "react";
-import { DeckGLOverlay } from "./DeckGLOverlay.ts";
+import { DeckGLOverlay } from "./DeckGLOverlay.tsx";
 
 const LINE_COLORS: Record<string, [number, number, number]> = {
 	"1": [238, 53, 46],

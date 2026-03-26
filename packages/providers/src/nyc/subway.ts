@@ -11,10 +11,10 @@ function interpolateAlongLine(coords: number[][], fraction: number): [number, nu
 	const high = Math.min(low + 1, totalPoints - 1);
 	const t = idx - low;
 
-	const p0 = coords[low]!;
-	const p1 = coords[high]!;
+	const [x0, y0] = coords[low] as [number, number];
+	const [x1, y1] = coords[high] as [number, number];
 
-	return [p0[0]! + (p1[0]! - p0[0]!) * t, p0[1]! + (p1[1]! - p0[1]!) * t];
+	return [x0 + (x1 - x0) * t, y0 + (y1 - y0) * t];
 }
 
 function seededRandom(seed: number): number {
