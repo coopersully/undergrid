@@ -60,6 +60,7 @@
         "@undergrid/types": "workspace:*",
       },
       "devDependencies": {
+        "@types/geojson": "^7946.0.16",
         "@undergrid/typescript-config": "workspace:*",
         "typescript": "^5.9.2",
       },
