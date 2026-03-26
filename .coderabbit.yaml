@@ -1,0 +1,60 @@
+# yaml-language-server: $schema=https://coderabbit.ai/integrations/schema.v2.json
+
+language: "en-US"
+early_access: false
+
+tone_instructions: "Be concise and direct. Focus on bugs, security, and performance — skip stylistic nitpicks that Biome already handles."
+
+reviews:
+  profile: "assertive"
+  request_changes_workflow: true
+  high_level_summary: true
+  high_level_summary_placeholder: "@coderabbit summary"
+  poem: false
+  review_status: true
+  collapse_walkthrough: true
+  sequence_diagrams: true
+
+  auto_review:
+    enabled: true
+    drafts: false
+    ignore_title_keywords:
+      - "WIP"
+      - "DO NOT MERGE"
+
+  path_instructions:
+    - path: "apps/api/**"
+      instructions: |
+        This is a Hono API running on Cloudflare Workers. Review for:
+        - Proper use of Hono context and middleware patterns
+        - Workers runtime compatibility (no Node.js-only APIs)
+        - Correct Zod schema validation
+        - KV caching patterns and TTL usage
+    - path: "apps/web/**"
+      instructions: |
+        This is a Vite + React SPA deployed on Cloudflare. Review for:
+        - React best practices (hooks, memoization, key props)
+        - Accessibility (a11y) issues
+        - Performance (bundle size, lazy loading)
+    - path: "packages/**"
+      instructions: |
+        Shared monorepo packages consumed by apps. Review for:
+        - Clean public API surface (minimal exports)
+        - No side effects in type-only packages
+        - Correct workspace dependency declarations
+
+  path_filters:
+    - "!bun.lock"
+    - "!**/*.min.js"
+    - "!**/dist/**"
+
+  tools:
+    biome:
+      enabled: true
+    github-checks:
+      enabled: true
+    ast-grep:
+      enabled: true
+
+chat:
+  auto_reply: true
