@@ -18,13 +18,10 @@ coverage
 # Turbo
 .turbo
 
-# Vercel
-.vercel
+# Cloudflare
+.wrangler
 
 # Build Outputs
-.next/
-out/
-build
 dist
 
 

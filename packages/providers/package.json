@@ -1,23 +1,22 @@
 {
-  "name": "@undergrid/providers",
-  "version": "0.0.0",
-  "private": true,
-  "type": "module",
-  "exports": {
-    ".": {
-      "types": "./src/index.ts",
-      "default": "./src/index.ts"
-    }
-  },
-  "scripts": {
-    "check-types": "tsc --noEmit",
-    "lint": "eslint ."
-  },
-  "dependencies": {
-    "@undergrid/types": "workspace:*"
-  },
-  "devDependencies": {
-    "@undergrid/typescript-config": "workspace:*",
-    "typescript": "^5.9.2"
-  }
+	"name": "@undergrid/providers",
+	"version": "0.0.0",
+	"private": true,
+	"type": "module",
+	"exports": {
+		".": {
+			"types": "./src/index.ts",
+			"default": "./src/index.ts"
+		}
+	},
+	"scripts": {
+		"check-types": "tsc --noEmit"
+	},
+	"dependencies": {
+		"@undergrid/types": "workspace:*"
+	},
+	"devDependencies": {
+		"@undergrid/typescript-config": "workspace:*",
+		"typescript": "^5.9.2"
+	}
 }
